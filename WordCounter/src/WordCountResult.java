@@ -50,6 +50,7 @@ public class WordCountResult {
 
     public Map<String, List<IWord>> getLetterIndexWords() {
         return _words.values().stream()
+                .sorted(new WordComparer())
                 .collect(Collectors.groupingBy(IWord::getLetterIndex));
     }
 }
