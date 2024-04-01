@@ -8,6 +8,7 @@ public class Word implements IWord {
     public Word(String word) {
         _word = word.trim();
         _wordLowerCased = _word.toLowerCase(Locale.ROOT);
+        _count = 1;
     }
 
     @Override
